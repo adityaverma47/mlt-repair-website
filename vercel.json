@@ -1,6 +1,5 @@
 {
   "buildCommand": "next build",
   "installCommand": "pnpm install",
-  "nodeVersion": "20.x",
   "packageManager": "pnpm@9"
 }
