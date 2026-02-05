@@ -18,10 +18,13 @@ export function Hero() {
           src="/images/maa-laptop-technology-arjunganj-lucknow-computer-repair-and-services-kkv3rkjy5d.jpg"
           alt="Maa Laptop Technology Shop"
           fill
-          className="object-cover opacity-10"
+          className="object-cover opacity-5"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-blue-900/10" />
+        {/* Animated gradient orbs */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-gradient-to-br from-blue-500/20 to-purple-500/10 rounded-full blur-3xl animate-gradient-shift opacity-30" />
+        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-gradient-to-tr from-cyan-500/15 to-blue-500/5 rounded-full blur-3xl animate-gradient-shift opacity-20 animation-delay-2000" />
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
@@ -54,16 +57,16 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6">
               <a
                 href={`tel:${businessConfig.phone.replace(/\s/g, "")}`}
-                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all hover:shadow-lg hover:shadow-blue-500/30 group text-sm sm:text-base md:text-lg"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 group text-sm sm:text-base md:text-lg hover:scale-105"
               >
-                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 Call Now
               </a>
               <a
                 href="#services"
-                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-all text-sm sm:text-base md:text-lg"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:border-blue-400 hover:bg-blue-500/10 transition-all duration-300 text-sm sm:text-base md:text-lg group"
               >
                 View Services
                 <svg
@@ -78,21 +81,21 @@ export function Hero() {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-6 sm:pt-8 border-t border-border">
-              <div>
-                <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-6 sm:pt-8 border-t border-blue-500/20">
+              <div className="group">
+                <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:scale-110 transition-transform origin-left">
                   2000+
                 </p>
                 <p className="text-xs sm:text-sm text-muted-foreground font-medium">Happy Customers</p>
               </div>
-              <div>
-                <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+              <div className="group">
+                <p className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent group-hover:scale-110 transition-transform origin-left">
                   2023
                 </p>
                 <p className="text-xs sm:text-sm text-muted-foreground font-medium">Established</p>
               </div>
-              <div>
-                <p className="text-2xl sm:text-3xl font-bold text-yellow-500">5★</p>
+              <div className="group">
+                <p className="text-2xl sm:text-3xl font-bold text-amber-400 group-hover:scale-110 transition-transform origin-left">5★</p>
                 <p className="text-xs sm:text-sm text-muted-foreground font-medium">Highly Rated</p>
               </div>
             </div>
@@ -102,7 +105,7 @@ export function Hero() {
           <div
             className={`relative h-64 sm:h-96 md:h-[500px] transition-all duration-1000 delay-300 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"} hidden sm:block`}
           >
-            <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl border border-primary/20">
+            <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-blue-500/30 hover:shadow-3xl hover:shadow-blue-500/30 transition-all">
               <Image
                 src="/images/maa-laptop-technology-arjunganj-lucknow-computer-repair-and-services-kkv3rkjy5d.jpg"
                 alt="Maa Laptop Technology Service Center"
@@ -110,15 +113,15 @@ export function Hero() {
                 className="object-cover hover:scale-105 transition-transform duration-500"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-blue-500/10" />
             </div>
 
             {/* Floating Badges */}
-            <div className="hidden sm:block absolute -bottom-4 -left-4 bg-white rounded-xl p-3 sm:p-4 shadow-xl border border-border">
+            <div className="hidden sm:block absolute -bottom-4 -left-4 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-3 sm:p-4 shadow-xl shadow-black/20 border border-slate-200 animate-float" style={{ animationDelay: "0s" }}>
               <p className="text-xs sm:text-sm font-bold text-gray-900">Professional Technicians</p>
               <p className="text-xs text-gray-600">Certified & Experienced</p>
             </div>
-            <div className="hidden sm:block absolute -top-4 -right-4 bg-blue-600 text-white rounded-xl p-3 sm:p-4 shadow-xl">
+            <div className="hidden sm:block absolute -top-4 -right-4 bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-xl p-3 sm:p-4 shadow-xl shadow-blue-500/40 border border-blue-400/30 animate-float" style={{ animationDelay: "1s" }}>
               <p className="text-xs sm:text-sm font-bold">Same Day Support</p>
               <p className="text-xs">24/7 Available</p>
             </div>

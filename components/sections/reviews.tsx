@@ -74,29 +74,34 @@ export function Reviews() {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className={`group bg-card border border-border/50 rounded-xl sm:rounded-2xl p-4 sm:p-8 hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/10 ${
+              className={`group relative bg-gradient-to-br from-card/60 to-card/40 border border-blue-500/20 rounded-xl sm:rounded-2xl p-4 sm:p-8 hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 ${
                 isVisible ? "animate-fade-in-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Star Rating */}
-              <div className="flex gap-1 mb-4">
-                {Array(review.rating)
-                  .fill(0)
-                  .map((_, i) => (
-                    <svg key={i} className="w-4 h-4 fill-accent text-accent" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  ))}
-              </div>
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              
+              <div className="relative z-10">
+                {/* Star Rating */}
+                <div className="flex gap-1 mb-4">
+                  {Array(review.rating)
+                    .fill(0)
+                    .map((_, i) => (
+                      <svg key={i} className="w-4 h-4 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform" viewBox="0 0 24 24" style={{ transitionDelay: `${i * 50}ms` }}>
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                    ))}
+                </div>
 
-              {/* Review Text */}
-              <p className="text-xs sm:text-sm text-muted-foreground mb-4 leading-relaxed">"{review.text}"</p>
+                {/* Review Text */}
+                <p className="text-xs sm:text-sm text-muted-foreground mb-4 leading-relaxed">"{review.text}"</p>
 
-              {/* Author */}
-              <div className="border-t border-border/30 pt-4">
-                <p className="font-bold text-sm sm:text-base text-foreground">{review.name}</p>
-                <p className="text-xs sm:text-sm text-secondary">{review.title}</p>
+                {/* Author */}
+                <div className="border-t border-blue-500/20 pt-4">
+                  <p className="font-bold text-sm sm:text-base text-foreground group-hover:text-blue-300 transition-colors">{review.name}</p>
+                  <p className="text-xs sm:text-sm text-cyan-400">{review.title}</p>
+                </div>
               </div>
             </div>
           ))}
