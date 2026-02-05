@@ -6,13 +6,13 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-background border-t border-border">
+    <footer className="bg-background/80 border-t border-blue-500/20 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 sm:mb-12">
           {/* About */}
           <div className="col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+            <div className="flex items-center gap-2 mb-4 group">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 via-cyan-400 to-purple-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/40 transition-all">
                 <span className="text-white font-bold text-xs sm:text-lg">ML</span>
               </div>
               <div>
@@ -179,13 +179,13 @@ export function Footer() {
         </div>
 
         {/* Payment Methods */}
-        <div className="border-t border-border pt-6 sm:pt-8 mb-6 sm:mb-8">
+        <div className="border-t border-blue-500/20 pt-6 sm:pt-8 mb-6 sm:mb-8">
           <p className="text-xs sm:text-sm font-medium text-foreground mb-3">Payment Methods Accepted</p>
           <p className="text-xs sm:text-sm text-muted-foreground">{businessConfig.paymentMethods.join(" • ")}</p>
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-border pt-6 sm:pt-8">
+        <div className="border-t border-blue-500/20 pt-6 sm:pt-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6">
             {/* Socials */}
             <div className="flex gap-3 sm:gap-4 justify-center sm:justify-start">
@@ -193,7 +193,7 @@ export function Footer() {
                 href={businessConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-card hover:bg-primary/20 flex items-center justify-center text-muted-foreground hover:text-primary transition-all"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-blue-500/10 hover:bg-blue-500/30 border border-blue-500/20 hover:border-blue-400/50 flex items-center justify-center text-blue-300 hover:text-blue-100 transition-all duration-300 group hover:scale-110"
                 aria-label="Facebook"
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -204,7 +204,7 @@ export function Footer() {
                 href={businessConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-card hover:bg-primary/20 flex items-center justify-center text-muted-foreground hover:text-primary transition-all"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-cyan-500/10 to-purple-500/10 hover:from-cyan-500/30 hover:to-purple-500/30 border border-cyan-500/20 hover:border-cyan-400/50 flex items-center justify-center text-cyan-300 hover:text-cyan-100 transition-all duration-300 group hover:scale-110"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">

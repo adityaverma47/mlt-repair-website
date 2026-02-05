@@ -31,15 +31,15 @@ export function Navigation() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg"
-          : "bg-background/80 backdrop-blur-md border-b border-border/20",
+          ? "bg-background/90 backdrop-blur-lg border-b border-blue-500/20 shadow-xl shadow-blue-500/5"
+          : "bg-background/50 backdrop-blur-md border-b border-blue-500/10",
       )}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-blue-500 via-cyan-400 to-purple-500 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:shadow-xl group-hover:shadow-blue-500/50 transition-all duration-300">
               <span className="text-white font-bold text-xs sm:text-lg">ML</span>
             </div>
             <div className="hidden sm:flex flex-col">

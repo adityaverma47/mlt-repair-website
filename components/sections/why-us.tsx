@@ -121,19 +121,19 @@ export function WhyUs() {
           {whyUs.map((item, index) => (
             <div
               key={index}
-              className={`group relative overflow-hidden rounded-lg sm:rounded-2xl border border-border/50 bg-card/30 p-4 sm:p-8 hover:border-primary/50 transition-all hover:bg-card/60 hover:shadow-xl hover:shadow-primary/10 ${
+              className={`group relative overflow-hidden rounded-lg sm:rounded-2xl border border-blue-500/20 bg-gradient-to-br from-card/60 to-card/40 p-4 sm:p-8 hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 ${
                 isVisible ? "animate-fade-in-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${index * 80}ms` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
 
               <div className="relative z-10">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-500/10 flex items-center justify-center mb-4 group-hover:from-blue-500/40 group-hover:to-cyan-500/20 transition-all duration-300 border border-blue-500/20 group-hover:border-blue-400/40">
                   {whyUsIcons[item.icon as keyof typeof whyUsIcons]}
                 </div>
 
-                <h3 className="text-base sm:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                <h3 className="text-base sm:text-xl font-bold text-foreground mb-2 group-hover:text-blue-300 transition-colors duration-300">
                   {item.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-muted-foreground">{item.description}</p>
@@ -143,21 +143,21 @@ export function WhyUs() {
         </div>
 
         {/* Stats */}
-        <div className="mt-12 sm:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 p-4 sm:p-8 bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 rounded-2xl sm:rounded-3xl border border-border/30">
-          <div className="text-center">
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2">2000+</p>
+        <div className="mt-12 sm:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 p-4 sm:p-8 bg-gradient-to-r from-blue-500/15 via-cyan-500/10 to-purple-500/10 rounded-2xl sm:rounded-3xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300">
+          <div className="text-center group hover:scale-110 transition-transform duration-300 cursor-default">
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">2000+</p>
             <p className="text-xs sm:text-sm text-muted-foreground">Happy Customers</p>
           </div>
-          <div className="text-center">
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary mb-2">2023</p>
+          <div className="text-center group hover:scale-110 transition-transform duration-300 cursor-default">
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-2">2023</p>
             <p className="text-xs sm:text-sm text-muted-foreground">Established</p>
           </div>
-          <div className="text-center">
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent mb-2">100%</p>
+          <div className="text-center group hover:scale-110 transition-transform duration-300 cursor-default">
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-amber-400 mb-2">100%</p>
             <p className="text-xs sm:text-sm text-muted-foreground">Genuine Parts</p>
           </div>
-          <div className="text-center">
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2">5★</p>
+          <div className="text-center group hover:scale-110 transition-transform duration-300 cursor-default">
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 mb-2">5★</p>
             <p className="text-xs sm:text-sm text-muted-foreground">Rated</p>
           </div>
         </div>
